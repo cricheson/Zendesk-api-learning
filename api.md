@@ -20,3 +20,11 @@
  
 
 ```curl https://whalelava.zendesk.com/api/v2/tickets/{112}.json -H "Content-Type: application/json" -d '{"ticket": {"status": "solved", "assignee_id": "1337162288", "comment": {"public": true, "body": "Thanks, this is now solved!"}}}' -v -u christian.richeson@gmail.com -X PUT```
+
+- Create a user with multiple organizations. What organization will be set on a ticket who has that user as a requester?
+
+
+```curl https://whalelava.zendesk.com/api/v2/organization_memberships/create_many.json -H "Content-Type: application/json" -d '{"organization_memberships": [{"user_id": 1337162288, "organization_id": 756772457}, {"user_id": 1337162288, "organization_id": 599469078, "default": true}, {"user_id": 1337162288, "organization_id": 598353198, "default": true}]}' -v -u christian.richeson@gmail.com -X POST```
+
+- Add a tag to a ticket, then a second tag. Make sure that both tags are now present on the ticket.
+
