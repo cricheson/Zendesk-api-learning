@@ -60,6 +60,10 @@
 
 -List all of the views in your account, then get the results of one of them.
 
+```curl https://whalelava.zendesk.com/api/v2/views.json -v -u christian.richeson@gmail.com```
+
+```curl https://whalelava.zendesk.com/api/v2/views/61718668/execute.json -v -u christian.richeson@gmail.com``
+
 -Create a view.
 
 -Preview the results of a view that you specify without actually creating it.
