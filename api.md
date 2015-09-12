@@ -46,6 +46,10 @@
 - Create a trigger. Update a ticket in a way that the trigger will apply, then find the audit ID of the trigger's action.
 
 
+```curl -u christian.richeson@gmail.com https://whalelava.zendesk.com/api/v2/triggers.json -H "Content-Type: application/json" -X POST -d '{"trigger": {"title": "test trigger", "all": [{ "field": "status", "operator": "is", "value": "open" }, { "field": "priority", "operator": "is", "value": "high" }], "actions": [{ "field": "assignee_id", "value": "1337162288" }]}}'```
+
+id":62446448 (created trigger)
+
 -Create a macro. Apply that macro to a ticket and save the result.
 
 -List all of the views in your account, then get the results of one of them.
