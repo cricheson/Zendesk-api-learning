@@ -48,7 +48,11 @@
 
 ```curl -u christian.richeson@gmail.com https://whalelava.zendesk.com/api/v2/triggers.json -H "Content-Type: application/json" -X POST -d '{"trigger": {"title": "test trigger", "all": [{ "field": "status", "operator": "is", "value": "open" }, { "field": "priority", "operator": "is", "value": "high" }], "actions": [{ "field": "assignee_id", "value": "1337162288" }]}}'```
 
-id":62446448 (created trigger)
+    id:62446448 (created trigger)
+
+```curl https://whalelava.zendesk.com/api/v2/triggers/62446448.json -v -u christian.richeson@gmail.com```
+
+
 
 -Create a macro. Apply that macro to a ticket and save the result.
 
