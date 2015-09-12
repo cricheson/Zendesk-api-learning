@@ -48,13 +48,15 @@
 
 ```curl -u christian.richeson@gmail.com https://whalelava.zendesk.com/api/v2/triggers.json -H "Content-Type: application/json" -X POST -d '{"trigger": {"title": "test trigger", "all": [{ "field": "status", "operator": "is", "value": "open" }, { "field": "priority", "operator": "is", "value": "high" }], "actions": [{ "field": "assignee_id", "value": "1337162288" }]}}'```
 
-    id:62446448 (created trigger)
-
 ```curl https://whalelava.zendesk.com/api/v2/triggers/62446448.json -v -u christian.richeson@gmail.com```
 
 
-
 -Create a macro. Apply that macro to a ticket and save the result.
+
+
+```curl -u christian.richeson@gmail.com https://whalelava.zendesk.com/api/v2/macros.json -H "Content-Type: application/json" -X POST -d '{"macro":{"title": "72 hr no response close v2", "actions": [{"field": "status", "value": "solved"}, {"field": "comment_value", "value": "Hello, Our agent has tried to contact you about this support request and has not heard back from you in the last 72 hours.  Due to this we will be closing the ticket.  Please feel free to contact us again if you need further assistance with this issue. Thanks. "}]}}'```
+ 
+
 
 -List all of the views in your account, then get the results of one of them.
 
