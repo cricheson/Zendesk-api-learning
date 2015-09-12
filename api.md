@@ -28,3 +28,34 @@
 
 - Add a tag to a ticket, then a second tag. Make sure that both tags are now present on the ticket.
 
+
+```curl https://whalelava.zendesk.com/api/v2/tickets/7/tags.json -X PUT -d '{ "tags": ["customer","test"] }' -H "Content-Type: application/json" -v -u christian.richeson@gmail.com```
+
+
+
+
+
+
+
+
+
+
+
+###Account settings/buisnes rules
+
+- Create a trigger. Update a ticket in a way that the trigger will apply, then find the audit ID of the trigger's action.
+
+
+-Create a macro. Apply that macro to a ticket and save the result.
+
+-List all of the views in your account, then get the results of one of them.
+
+-Create a view.
+
+-Preview the results of a view that you specify without actually creating it.
+
+-Create a SLA policy, then update it.
+
+-Add a new required ticket fied.
+
+-Create a new brand for your helpdesk. Set it as your default brand. Add a brand image for it.
