@@ -66,7 +66,11 @@
 
 -Create a view.
 
+```curl -u christian.richeson@gmail.com https://whalelava.zendesk.com/api/v2/views.json -H "Content-Type: application/json" -X POST -d '{"view": {"title": "high priority and open", "all": [{ "field": "status", "operator": "is", "value": "open" }, { "field": "priority", "operator": "is", "value": "high" }]}}'```
+
 -Preview the results of a view that you specify without actually creating it.
+
+```curl https://whalelava.zendesk.com/api/v2/views/preview.json -v -u christian.richeson@gmail.com -X POST -H "Content-Type: application/json" -d '{"view": {"all": [{"operator": "is", "value": "pending", "field": "status"}], "output": {"columns": ["subject"]}}}'```
 
 -Create a SLA policy, then update it.
 
