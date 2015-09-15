@@ -101,3 +101,5 @@
 ```curl https://whalelava.zendesk.com/api/v2/requests.json -v -u guy@place.com/token:1yO4CeBapTn7T8Ag1ZKbusrAwq6in2CD6nIjLsD7```
 
 -As an end user, mark a ticket as solved and then add a satisfaction rating for that ticket.
+
+```curl https://whalelava.zendesk.com/api/v2/requests/118.json -d '{"request": {"comment": {"body": "Thanks!"}, "status": "solved"}}' -v -u guy@place.com/token:1yO4CeBapTn7T8Ag1ZKbusrAwq6in2CD6nIjLsD7 -X PUT -H "Content-Type: application/json"```
