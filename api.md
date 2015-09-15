@@ -74,6 +74,11 @@
 
 -Create a SLA policy, then update it.
 
+
+
+```curl https://whalelava.zendesk.com/api/v2/slas/policies -H "Content-Type: application/json" -d '{ "sla_policy": { "title": "Incidents", "description": "For urgent incidents, we will respond to tickets in 10 minutes", "position": 3, "filter": { "all": [{ "field": "type", "operator": "is", "value": "incident" }], "any": [] }, "policy_metrics": [{ "priority": "normal", "metric": "first_reply_time", "target": 60, "business_hours": false }, { "priority": "urgent", "metric": "first_reply_time", "target": 30, "business_hours": false }, { "priority": "low", "metric": "requester_wait_time", "target": 6000, "business_hours": true }, { "priority": "normal", "metric": "requester_wait_time", "target": 500, "business_hours": true }, { "priority": "high", "metric": "requester_wait_time", "target": 360, "business_hours": false }, { "priority": "urgent", "metric": "requester_wait_time", "target": 240, "business_hours": false }]}}' -v -u christian.richeson@gmail.com -X POST```
+
+
 -Add a new required ticket fied.
 
 -Create a new brand for your helpdesk. Set it as your default brand. Add a brand image for it.
