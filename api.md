@@ -81,4 +81,6 @@
 
 -Add a new required ticket fied.
 
+curl https://whalelava.zendesk.com/api/v2/ticket_fields.json -H "Content-Type: application/json" -X POST -d '{"ticket_field": {"type": "text", "title": "Serial Number", "active": true, "required": true, "visible_in_portal": true, "editable_in_portal": true, "required_in_portal": true, "regexp_for_validation": "\\w{7}"}}' -v -u christian.richeson@gmail.com
+
 -Create a new brand for your helpdesk. Set it as your default brand. Add a brand image for it.
