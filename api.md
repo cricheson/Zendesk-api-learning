@@ -90,3 +90,14 @@
 
 
 
+###End-users
+
+-As an end user, create a new request.  (This only works when the test ticket field has the required box unchecked even through a value is given for the field.)
+
+curl https://whalelava.zendesk.com/api/v2/requests.json -d '{"request": {"subject": "Help!", "comment": {"body": "My printer is on fire!", "custom_fields": [{"27836418": "1234567"}]}}}' -v -u guy@place.com/token:1yO4CeBapTn7T8Ag1ZKbusrAwq6in2CD6nIjLsD7 -X POST -H "Content-Type: application/json"
+
+-As an end user, list the requests that you have open.
+
+
+
+-As an end user, mark a ticket as solved and then add a satisfaction rating for that ticket.
