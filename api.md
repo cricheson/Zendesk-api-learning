@@ -118,7 +118,7 @@
 
 ```curl https://whalelava.zendesk.com/api/v2/help_center/categories/200807198/sections.json -d '{"section": {"position": 2, "translations":  [{"locale": "en-us", "title": "Explosions", "body": "This section contains articles on exploding flight instruments"}, {"locale": "fr", "title": "French Explosions", "body": "Je ne sais pas le français, mais les explosions sont assez cool"}]}}' -v -u christian.richeson@gmail.com -X POST -H "Content-Type: application/json"```
 
-```curl https://whalelava.zendesk.com/api/v2/help_center/sections/201950978/access_policy.json -d '{"viewable_by": "signed_in_users", "manageable_by": "staff", "required_tags": ["test"]}' -v -u christian.richeson@gmail.com -X PUT -H "Content-Type: application/json"```
+```curl https://whalelava.zendesk.com/api/v2/help_center/sections/201950978/access_policy.json -d '{"access_policy": {"viewable_by": "signed_in_users", "manageable_by": "staff", "required_tags": ["testers"]}}' -v -u christian.richeson@gmail.com -X PUT -H "Content-Type: application/json"```
 
 
 -Make sure that both articles have the correct permissions.
