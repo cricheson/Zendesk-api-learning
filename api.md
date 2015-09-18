@@ -105,3 +105,27 @@
 ```curl https://whalelava.zendesk.com/api/v2/requests/118.json -d '{"request": {"comment": {"body": "Thanks!"}, "solved": "true"}}' -v -u guy@place.com/token:1yO4CeBapTn7T8Ag1ZKbusrAwq6in2CD6nIjLsD7 -X PUT -H "Content-Type: application/json"```
 
 ```curl https://whalelava.zendesk.com/api/v2/tickets/118/satisfaction_rating.json -X POST -d '{"satisfaction_rating": {"score": "good", "comment": "Awesome support."}}' -v -u guy@place.com/token:1yO4CeBapTn7T8Ag1ZKbusrAwq6in2CD6nIjLsD7 -H "Content-Type: application/json"```
+
+
+
+###Help Center
+
+-Create a new article that is public.
+
+
+-Create a new article that only users with specific tags can use.
+
+
+-Make sure that both articles have the correct permissions.
+
+
+-As an end user, vote on an article.
+
+
+-Add a spanish translation to an article.
+
+
+-As an end user with spanish set as their locale, make sure that you get the spanish version of the article.
+
+
+-Upload an image to an article and embed it in the body.
