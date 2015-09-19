@@ -145,11 +145,13 @@
 
 -Bulk import several tickets. Check the status of the job until the tickets are imported.
 
+```curl https://whalelava.zendesk.com/api/v2/imports/tickets/create_many.json -v -u christian.richeson@gmail.com -X POST -d '{"tickets": [{"subject": "Help!", "comments": [{ "author_id": 19, "value": "This is a comment" }]}, {"subject": "Help!!", "comments": [{ "author_id": 21, "value": "This is a comment" }]}]}' -H "Content-Type: application/json"```
 
-
+```curl https://whalelava.zendesk.com/api/v2/job_statuses/{id}.json -v -u christian.richeson@gmail.com```
+  
 -Using the incremental endpoint, get a list of tickets that were updated in the past 10 days.
 
-
+```curl "https://whalelava.zendesk.com/api/v2/search.json" -G --data-urlencode "query=updated>10days" -v -u christian.richeson@gmail.com```
 
 -Search for tickets containing a keyword assigned to a specific agent.
 
