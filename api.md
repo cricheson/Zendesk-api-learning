@@ -155,4 +155,5 @@
 
 -Search for tickets containing a keyword assigned to a specific agent.
 
+curl "https://whalelava.zendesk.com/api/v2/search.json" -G --data-urlencode "query=type:ticket assignee:1337162288 pizza" -v -u christian.richeson@gmail.com
 
