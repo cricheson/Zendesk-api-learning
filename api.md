@@ -141,7 +141,7 @@
 ``curl https://whalelava.zendesk.com/api/v2/help_center/articles/210403417/attachments.json -F "inline=false" -F "file=@/home/user/92815c2fd70f1d6f3b3bbf3300c965f64d296f8b/Downloads/Pizza.jpg" -v -u christian.richeson@gmail.com -X POST```
 
 
-Misc.
+###Misc.
 
 -Bulk import several tickets. Check the status of the job until the tickets are imported.
 
@@ -152,3 +152,5 @@ Misc.
 
 
 -Search for tickets containing a keyword assigned to a specific agent.
+
+
