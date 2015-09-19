@@ -127,11 +127,28 @@
   
 -As an end user, vote on an article.
 
+```curl https://whalelava.zendesk.com/api/v2/help_center/articles/210403417/up.json -v -u christian.richeson@gmail.com -X POST -H "Content-Type: application/json"```
 
--Add a spanish translation to an article.
+-Add a translation to an article.
+
+```curl https://whalelava.zendesk.com/api/v2/locales/public.json -v -u christian.richeson@gmail.com```
+
+```curl https://whalelava.zendesk.com/api/v2/help_center/articles/210403417/translations.json -d '{"translation": {"locale": "is", "title": "ailosod cyfrinair", "body": "Nid oes gennyf unrhyw syniad sut i siarad Sbaeneg, ond fi ffigwr google cyfieithu yn ddigon da i wneud yn well na i gall"}}' -v -u christian.richeson@gmail -X POST -H "Content-Type: application/json"```
 
 
--As an end user with spanish set as their locale, make sure that you get the spanish version of the article.
+-Upload an image to an article
+
+``curl https://whalelava.zendesk.com/api/v2/help_center/articles/210403417/attachments.json -F "inline=false" -F "file=@/home/user/92815c2fd70f1d6f3b3bbf3300c965f64d296f8b/Downloads/Pizza.jpg" -v -u christian.richeson@gmail.com -X POST```
 
 
--Upload an image to an article and embed it in the body.
+Misc.
+
+-Bulk import several tickets. Check the status of the job until the tickets are imported.
+
+
+
+-Using the incremental endpoint, get a list of tickets that were updated in the past 10 days.
+
+
+
+-Search for tickets containing a keyword assigned to a specific agent.
